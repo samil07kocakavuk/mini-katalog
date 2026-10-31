@@ -17,7 +17,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final catalog = AppScope.of(context).catalog;
-    final theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -44,21 +43,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 24),
-                Text(
-                  'Keşfet',
-                  style: theme.textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.w800,
-                    color: theme.colorScheme.onSurface,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  'Sana uygun ürünü bul.',
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
-                  ),
-                ),
-                const SizedBox(height: 20),
                 _FeaturedSection(catalog: catalog),
                 const SizedBox(height: 24),
                 FilledButton(
@@ -67,22 +51,6 @@ class HomeScreen extends StatelessWidget {
                     ProductListScreen.routeName,
                   ),
                   child: const Text('Tüm Ürünleri Gör'),
-                ),
-                const SizedBox(height: 28),
-                Text(
-                  'Mini Katalog',
-                  style: theme.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  'Flutter ile geliştirilmiş demo katalog. Ürün verileri '
-                  'wantapi.com üzerinden canlı olarak alınır.',
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
-                    height: 1.5,
-                  ),
                 ),
               ],
             );

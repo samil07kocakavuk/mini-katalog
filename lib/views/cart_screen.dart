@@ -66,34 +66,15 @@ class _CartSummary extends StatelessWidget {
     final theme = Theme.of(context);
     return SafeArea(
       minimum: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
+      child: Row(
         children: [
-          Row(
-            children: [
-              const Text('Toplam'),
-              const Spacer(),
-              Text(
-                formatUsd(cart.totalPrice),
-                style: theme.textTheme.titleLarge?.copyWith(
-                  color: theme.colorScheme.secondary,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Demo uygulaması: ödeme alınmaz.'),
-                  ),
-                );
-              },
-              child: const Text('Ödemeye Geç (Demo)'),
+          const Text('Toplam'),
+          const Spacer(),
+          Text(
+            formatUsd(cart.totalPrice),
+            style: theme.textTheme.titleLarge?.copyWith(
+              color: theme.colorScheme.secondary,
+              fontWeight: FontWeight.w800,
             ),
           ),
         ],
@@ -126,14 +107,6 @@ class _EmptyCart extends StatelessWidget {
               'Sepetin boş',
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.w700,
-              ),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              'Beğendiğin ürünleri sepete ekleyerek başla.',
-              textAlign: TextAlign.center,
-              style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
               ),
             ),
             const SizedBox(height: 20),

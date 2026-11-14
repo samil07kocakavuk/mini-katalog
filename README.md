@@ -85,6 +85,10 @@ Projede ürün modeli, API servisi, sepet durumu ve fiyat biçimlendirme için t
 
 https://github.com/samil07kocakavuk/mini-katalog
 
+## İndirme
+
+Android APK: https://github.com/samil07kocakavuk/mini-katalog/releases/latest
+
 ## Notlar
 
 - Ürün verisi canlı kaynaktan geldiği için internet bağlantısı gerekir.
